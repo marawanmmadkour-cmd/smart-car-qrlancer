@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+:root{--bg:#0b1220;--panel:#121e30;--line:rgba(255,255,255,.1);--muted:#9eacc0;--text:#f5f8fc;--accent:#71d5c0}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -10%,#243b58 0%,#101b2d 38%,var(--bg) 78%);color:var(--text);font-family:'Cairo',Inter,sans-serif;padding:22px}
+.page{width:min(100%,560px);margin:auto;animation:rise .75s ease both}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin:4px 0 34px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:1.2px;font-family:Inter,'Cairo',sans-serif;font-size:14px}
+.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:2px;margin-top:3px}
+.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#8be4d0,#4a9fbd);color:#0b1724;font-weight:900}
+button{font:inherit}
+.lang-btn{border:1px solid var(--line);background:#ffffff0b;color:#eaf2fa;border-radius:999px;padding:8px 15px;cursor:pointer}
+.eyebrow{display:flex;align-items:center;gap:9px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.5px}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent)}
+h1{font-size:clamp(30px,8vw,42px);line-height:1.2;margin:10px 0 8px;font-weight:800}
+.intro{color:var(--muted);line-height:1.9;margin:0 0 22px;font-size:14px}
+.vehicle-card{overflow:hidden;border:1px solid var(--line);border-radius:25px;background:linear-gradient(145deg,#1b2b40,#111d2e);box-shadow:0 22px 55px #0005}
+.car-visual{height:190px;position:relative;display:flex;align-items:center;justify-content:center;background:linear-gradient(120deg,#1b3148,#101a2a);overflow:hidden}
+.car-visual:before,.car-visual:after{content:"";position:absolute;border:1px solid #ffffff12;border-radius:50%;width:300px;height:300px}
+.car-visual:after{width:420px;height:420px}
+.car-visual svg{position:relative;z-index:1;width:95%;max-height:185px;filter:drop-shadow(0 18px 16px #0008);animation:carFloat 4s ease-in-out infinite}
+.glow{position:absolute;width:65%;height:50px;bottom:20px;background:#6cd6c533;filter:blur(35px);border-radius:50%}
+.vehicle-info{padding:20px 22px 23px}
+.tag{font-size:10px;color:var(--accent);letter-spacing:1.5px;font-weight:800}
+h2{margin:4px 0 16px;font-size:24px}
+.plate-wrap{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px}
+.muted{font-size:12px;color:var(--muted)}
+.plate{border:1px solid #ffffff32;background:#f5f7fa;color:#172334;border-radius:7px;padding:5px 13px;font-size:14px;letter-spacing:.4px}
+.contact-panel{margin-top:18px;border:1px solid var(--line);background:#121e30e8;border-radius:25px;padding:22px;box-shadow:0 18px 50px #0003}
+.owner{display:flex;align-items:center;gap:13px;padding-bottom:17px;border-bottom:1px solid var(--line)}
+.avatar{width:47px;height:47px;border-radius:16px;background:linear-gradient(135deg,#8be4d0,#4a9fbd);display:grid;place-items:center;color:#102032;font-weight:900;font-family:Inter,sans-serif}
+h3{margin:2px 0 0;font-size:17px}
+.hint{color:var(--muted);font-size:13px;margin:17px 0 12px}
+.action{display:flex;align-items:center;gap:12px;text-decoration:none;color:white;padding:14px 16px;border-radius:15px;margin-top:10px;font-weight:700;transition:transform .2s,filter .2s}
+.action:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.call{background:linear-gradient(110deg,#20a875,#16835f);box-shadow:0 8px 22px #15966c30}
+.whatsapp{background:linear-gradient(110deg,#258b69,#176b55);border:1px solid #8be4d044}
+.action-icon{width:30px;height:30px;border-radius:10px;background:#ffffff20;display:grid;place-items:center;font-size:18px}
+.arrow{margin-inline-start:auto;font-size:20px;opacity:.8}
+.privacy{color:#8292a8;font-size:10px;line-height:1.8;margin:16px 2px 0}
+footer{display:flex;justify-content:space-between;gap:12px;color:#65758b;font:9px Inter,'Cairo',sans-serif;letter-spacing:1px;padding:22px 5px 8px}
+[dir=ltr] .brand{letter-spacing:1px}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes carFloat{0%,100%{transform:translateY(2px)}50%{transform:translateY(-5px)}}
+@media(max-width:420px){body{padding:15px}.topbar{margin-bottom:27px}.car-visual{height:160px}.contact-panel{padding:18px}.vehicle-info{padding:17px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
